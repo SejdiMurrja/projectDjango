@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h1>Hello, Contact!</h1>
+  <form>
+    <div class="mb-3">
+      <label for="fname" class="form-label">Name</label>
+      <input type="text" class="form-control" id="fname" />
+    </div>
+    <div class="mb-3">
+      <label for="lname" class="form-label">Surname</label>
+      <input type="text" class="form-control" id="lname" />
+    </div>
+    <div class="mb-3">
+      <label for="Email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="Email" />
+    </div>
+    <div class="mb-3">
+      <label for="comment" class="form-label">Comment</label>
+      <textarea class="form-control" id="comment" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+</div>
+{% endblock %}
+
+
+    
+    
