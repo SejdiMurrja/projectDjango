@@ -78,16 +78,19 @@
 
     <!-- Nis grid -->
     <div class="container mb-5">
+
       <div class="row">
+        {% for planet in planetInfo %}
+  
         <div class="col-12 col-md-6 col-lg-4 mb-3">
+          
           <div class="card text-center border-0">
             <img
-              src="{% static 'images/planet2.jpg' %}"
+              src="{{planet.planet_image.url}}"
               class="card-img-top rounded-circle mx-auto"
-              alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">{{planet.planet_title}}</h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
@@ -96,40 +99,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-3">
-          <div class="card text-center border-0">
-            <img
-              src="{% static 'images/planet4.jpg' %}"
-              class="card-img-top rounded-circle mx-auto"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-dark">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-3">
-          <div class="card text-center border-0">
-            <img
-              src="{% static 'images/planet6.jpg' %}"
-              class="card-img-top rounded-circle mx-auto"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-dark">Go somewhere</a>
-            </div>
-          </div>
-        </div>
+     {% endfor %}
       </div>
       <div class="row mt-5">
         <div class="row">
